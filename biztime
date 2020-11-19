@@ -1,0 +1,11 @@
+SELECT code, name, description, companies_industries.industries_code 
+FROM companies 
+LEFT JOIN companies_industries ON code = companies_code 
+WHERE code = 'apple';
+
+
+INSERT INTO companies_industries (companies_code,industry)
+  VALUES ('apple','Finance'),('ibm','Finance');
+
+INSERT INTO industries (code, industry)
+  VALUES ('acct','Accounting'),('fin','Finance');
